@@ -1,0 +1,13 @@
+function X = dft_t(xn,N);
+L= length(xn);
+if (N<L)
+    error('N must be greater or equal to L');
+end
+xn=[xn zeros(1,N-L)];
+for k=0:1:N-1
+    for n=0:1:N-1
+        p=exp(-i*2*pi*n*k/N);
+        x2(k+1,n+1)=p;
+    end
+end
+X = x2*xn';

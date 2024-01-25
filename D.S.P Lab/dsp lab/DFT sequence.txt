@@ -1,0 +1,9 @@
+% Program to compute DFT of a sequence
+X = [1,0,-1,2];
+N = 4;
+n = [0:1:N-1];
+K = [0:1:N-1];
+WN = exp (-j*2*pi/N);
+nK = n.*K;
+WNnk = WN.^nK;
+XK = X.^WNnK;

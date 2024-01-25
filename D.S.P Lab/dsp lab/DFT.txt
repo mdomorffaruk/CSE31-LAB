@@ -1,0 +1,9 @@
+x = input('enter the input sequence');
+%enter the first sequence[1 2 3 4 5 6 7 8]
+n=input('enter the length of sequence');
+%enter the length of sequence8
+X=fft(x,n);
+stem(x);
+plot(x);
+plot(X);
+title('DFT of the input sequence');
